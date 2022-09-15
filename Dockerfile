@@ -4,5 +4,6 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 WORKDIR /code
 COPY requirements.txt /code/
+RUN pip3 install typed_ast
 RUN pip install -r requirements.txt
 COPY . /code/
