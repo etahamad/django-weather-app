@@ -1,4 +1,6 @@
-# syntax=docker/dockerfile:1
+FROM postgres:
+COPY init.sql /docker-entrypoint-initdb.d/
+
 FROM python:3
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
